@@ -75,11 +75,11 @@ def gen_pq(nbits):
     pbits = nbits - shift
     qbits = nbits + shift
 
-    def check(q, p):
-        if p == q:
+    def check(check_q, check_p):
+        if check_p == check_q:
             return False
 
-        n = p * q
+        n = check_p * check_q
         return n.bit_length() == total_bits
 
     p = gen_prime(pbits)
@@ -94,4 +94,4 @@ def gen_pq(nbits):
 
         change_p = not change_p
 
-    return (p, q)
+    return p, q
