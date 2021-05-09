@@ -1,4 +1,4 @@
-import rsa.common as common
+import common.common as common
 import random
 
 
